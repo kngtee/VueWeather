@@ -3,6 +3,7 @@ import { ref } from "vue";
 import axios from "axios";
 import { useRouter } from "vue-router";
 
+
 const router = useRouter();
 const previewCity = (searchResult) => {
   console.log(searchResult);
@@ -18,8 +19,7 @@ const previewCity = (searchResult) => {
   });
 };
 
-const mapboxAPIKEY =
-  "pk.eyJ1IjoidGVleTAwNyIsImEiOiJjbG11Ym8yMzUwYzV2MmtsZXl5cG5qbXZ2In0.ep8DShlmuDbpsHXFloxFxA";
+const mapboxAPIKEY = import.meta.env.VITE_APP_API_URL;
 const searchQuery = ref("");
 const queryTimeout = ref(null);
 const mapboxSearchResult = ref(null);
